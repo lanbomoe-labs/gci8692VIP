@@ -38,24 +38,22 @@
             -webkit-text-fill-color: transparent;
         }
         .glass-card {
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(212, 175, 55, 0.25);
         }
         .glass-card:hover {
             border-color: rgba(212, 175, 55, 0.5);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between bg-navydark text-white">
 
     <!-- EXECUTIVE TOP NAV BAR -->
-    <nav class="w-full py-4 px-6 bg-navy/90 border-b border-gold/30 sticky top-0 z-50 backdrop-blur-md flex items-center justify-between">
+    <nav class="w-full py-4 px-6 bg-navy/95 border-b border-gold/30 sticky top-0 z-50 backdrop-blur-md flex items-center justify-between">
         <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 rounded-full border border-gold/50 flex items-center justify-center bg-gold/10 text-gold font-cinzel font-bold text-xs">
-                GCI
-            </div>
+            <img src="assets/images/GCIOBA%20logo.jpeg" alt="GCIOBA Logo" class="w-9 h-9 rounded-full border border-gold/50 object-cover">
             <span class="font-cinzel text-sm sm:text-base font-bold text-white tracking-wider">GCI 86/92 SET</span>
         </div>
         <div class="flex items-center space-x-4">
@@ -68,7 +66,11 @@
 
     <!-- HERO HEADER -->
     <header class="w-full py-12 px-4 text-center border-b border-gold/20 bg-gradient-to-b from-navy to-navydark relative overflow-hidden">
-        <div class="max-w-4xl mx-auto space-y-4">
+        <div class="max-w-4xl mx-auto space-y-5">
+            <div class="flex justify-center items-center space-x-4 mb-2">
+                <img src="assets/images/GCIOBA%20logo.jpeg" alt="GCIOBA Crest" class="w-14 h-14 rounded-full border-2 border-gold/60 shadow-lg object-cover">
+                <img src="assets/images/GCI%2086%20Set%20logo.jpeg" alt="GCI 86 Set Logo" class="w-14 h-14 rounded-full border-2 border-gold/60 shadow-lg object-cover">
+            </div>
             <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold/40 bg-gold/10 text-gold text-xs font-semibold tracking-widest uppercase">
                 <i class="fa-solid fa-award"></i>
                 <span>40th Anniversary Jubilee Celebration • 1986–2026</span>
@@ -80,7 +82,7 @@
                 1986–1992 SET • EXECUTIVE VIP MEDIA VAULT
             </h2>
             <p class="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Welcome, Esteemed Dignitary, Distinguished Guest & Alumni Old Boy. Access official commemorative audio anthems, the 20-page gala booklet, and real-time event media gallery below.
+                Welcome, Esteemed Dignitary, Distinguished Guest & Alumni Old Boy. Access official commemorative audio anthems, the gala programme publication, and the live photo gallery below.
             </p>
         </div>
     </header>
@@ -91,23 +93,23 @@
         <!-- BRAND HUB LINK BANNER -->
         <div class="glass-card rounded-2xl p-6 border-l-4 border-l-gold flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
             <div class="space-y-1 text-center sm:text-left">
-                <span class="text-xs font-bold text-gold tracking-widest uppercase"><i class="fa-solid fa-crown mr-1"></i> Executive Strategic Partner</span>
+                <span class="text-xs font-bold text-gold tracking-widest uppercase"><i class="fa-solid fa-crown mr-1"></i> Strategic Digital Architecture Partner</span>
                 <h3 class="text-base font-cinzel font-bold text-white">Digitally Packaged by LanBo-Moe Ecosystem & MWB Publishing</h3>
-                <p class="text-xs text-gray-400">Access enterprise IT, digital architecture, and strategic publishing solutions.</p>
+                <p class="text-xs text-gray-400">Enterprise IT systems, web architecture, and strategic corporate publishing.</p>
             </div>
             <a href="https://www.lanbomoe.com" target="_blank" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold via-amber-500 to-gold text-navy font-bold text-xs tracking-wider uppercase shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap">
                 Visit Main Hub <i class="fa-solid fa-external-link ml-1"></i>
             </a>
         </div>
 
-        <!-- COMMEMORATIVE SOUNDTRACKS SECTION -->
+        <!-- COMMEMORATIVE AUDIO SOUNDTRACKS SECTION -->
         <section class="space-y-6">
             <div class="flex items-center justify-between border-b border-gold/20 pb-3">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-music"></i></div>
                     <h3 class="text-xl font-cinzel font-bold gold-gradient-text">Commemorative Audio Suite</h3>
                 </div>
-                <span class="text-xs text-gray-400 font-medium">6 Official House Anthems</span>
+                <span class="text-xs text-gray-400 font-medium">6 Official Tracks</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -117,12 +119,12 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <h4 class="font-cinzel font-bold text-base text-white">GCI School Song</h4>
-                            <p class="text-xs text-gray-400">Official School Anthem</p>
+                            <p class="text-xs text-gray-400">Official Alumni Anthem</p>
                         </div>
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-gold/20 text-gold font-semibold border border-gold/30">Studio Master</span>
                     </div>
                     <audio controls class="w-full h-9 rounded-lg accent-gold">
-                        <source src="assets/audio/gci-school-song.mp3" type="audio/mpeg">
+                        <source src="assets/audio/GCI%20School%20Song%20-%201.mp3" type="audio/mpeg">
                     </audio>
                 </div>
 
@@ -131,12 +133,12 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <h4 class="font-cinzel font-bold text-base text-white">Powell House Anthem</h4>
-                            <p class="text-xs text-gray-400">Official House Song</p>
+                            <p class="text-xs text-gray-400">Official House Anthem</p>
                         </div>
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-red-900/40 text-red-300 font-semibold border border-red-500/30">Studio Master</span>
                     </div>
                     <audio controls class="w-full h-9 rounded-lg accent-gold">
-                        <source src="assets/audio/powell-house-anthem.mp3" type="audio/mpeg">
+                        <source src="assets/audio/Powell%20House%20Anthem.mp3" type="audio/mpeg">
                     </audio>
                 </div>
 
@@ -150,7 +152,7 @@
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-blue-900/40 text-blue-300 font-semibold border border-blue-500/30">Studio Master</span>
                     </div>
                     <audio controls class="w-full h-9 rounded-lg accent-gold">
-                        <source src="assets/audio/carr-house-anthem.mp3" type="audio/mpeg">
+                        <source src="assets/audio/GCI%20Carr%20House%20Anthem.mp3" type="audio/mpeg">
                     </audio>
                 </div>
 
@@ -164,7 +166,7 @@
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-emerald-900/40 text-emerald-300 font-semibold border border-emerald-500/30">Authentic Heritage</span>
                     </div>
                     <audio controls class="w-full h-9 rounded-lg accent-gold">
-                        <source src="assets/audio/swanston-house-anthem.mp3" type="audio/mpeg">
+                        <source src="assets/audio/GCI%20Swanston%20House%20Soundtrack%202.mp3" type="audio/mpeg">
                     </audio>
                 </div>
 
@@ -173,12 +175,12 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <h4 class="font-cinzel font-bold text-base text-white">Grier House Anthem</h4>
-                            <p class="text-xs text-gray-400">Piano Arrangement (HOS Tunbi Ashaye & Tunde Akinlosotu)</p>
+                            <p class="text-xs text-gray-400">Piano Suite (HOS Tunbi Ashaye & Tunde Akinlosotu)</p>
                         </div>
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-purple-900/40 text-purple-300 font-semibold border border-purple-500/30">Piano Suite</span>
                     </div>
                     <audio controls class="w-full h-9 rounded-lg accent-gold">
-                        <source src="assets/audio/grier-house-anthem.mp3" type="audio/mpeg">
+                        <source src="assets/audio/GCI%20Grier%20House%20Anthem%20Soundtrack%20_%20Full.mp3" type="audio/mpeg">
                     </audio>
                 </div>
 
@@ -192,7 +194,7 @@
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-amber-900/40 text-amber-300 font-semibold border border-amber-500/30">Live Acoustic</span>
                     </div>
                     <audio controls class="w-full h-9 rounded-lg accent-gold">
-                        <source src="assets/audio/field-house-anthem.mp3" type="audio/mpeg">
+                        <source src="assets/audio/GCI%20Field%20House%20Anthem.mp3" type="audio/mpeg">
                     </audio>
                 </div>
 
@@ -206,31 +208,31 @@
                     <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-book-open"></i></div>
                     <h3 class="text-xl font-cinzel font-bold gold-gradient-text">Commemorative Publication</h3>
                 </div>
-                <span class="text-xs text-gray-400">20-Page A5 Booklet</span>
+                <span class="text-xs text-gray-400">Official Gala Booklet</span>
             </div>
 
             <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="space-y-2 text-center md:text-left">
-                        <h4 class="font-cinzel text-xl font-bold text-white">GCI 86/92 Set 40th Anniversary Gala Programme</h4>
+                        <h4 class="font-cinzel text-xl font-bold text-white">GCI 86/92 Set 40th Anniversary Gala Night Event Programme</h4>
                         <p class="text-xs sm:text-sm text-gray-300 max-w-xl">
-                            Includes executive messages, donor appreciation, ICT project highlights, and the 4-day anniversary reunion schedule.
+                            Includes executive messages, donor appreciation, ICT project highlights, and the complete anniversary reunion schedule.
                         </p>
                     </div>
-                    <a href="assets/docs/gci-40th-gala-programme.pdf" download target="_blank" class="px-6 py-3 rounded-xl bg-gradient-to-r from-gold via-amber-500 to-gold text-navy font-bold text-xs tracking-wider uppercase shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                    <a href="assets/docs/GCI%2086-92%20Set%2040th%20Reunion%20Anniversary%20Gala%20Night%20Event%20Program2.pdf" download target="_blank" class="px-6 py-3 rounded-xl bg-gradient-to-r from-gold via-amber-500 to-gold text-navy font-bold text-xs tracking-wider uppercase shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 whitespace-nowrap">
                         <i class="fa-solid fa-file-pdf text-base"></i>
                         <span>Download HD Booklet (PDF)</span>
                     </a>
                 </div>
 
-                <!-- PDF Embedded Iframe Container -->
-                <div class="w-full h-[450px] rounded-xl overflow-hidden border border-gold/30 bg-black/50">
-                    <iframe src="assets/docs/gci-40th-gala-programme.pdf" class="w-full h-full" title="Gala Programme Booklet Preview"></iframe>
+                <!-- PDF Embedded Preview -->
+                <div class="w-full h-[480px] rounded-xl overflow-hidden border border-gold/30 bg-black/50">
+                    <iframe src="assets/docs/GCI%2086-92%20Set%2040th%20Reunion%20Anniversary%20Gala%20Night%20Event%20Program2.pdf" class="w-full h-full" title="Gala Programme Booklet Preview"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- AUTOMATED GOOGLE DRIVE EVENT GALLERY -->
+        <!-- GOOGLE DRIVE EVENT GALLERY & UPLOAD -->
         <section class="space-y-6">
             <div class="flex items-center justify-between border-b border-gold/20 pb-3">
                 <div class="flex items-center space-x-3">
@@ -239,36 +241,20 @@
                 </div>
                 <span class="text-xs text-gold flex items-center space-x-1">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                    <span>Auto-Syncing</span>
+                    <span>Live Drive Integration</span>
                 </span>
             </div>
 
             <div class="glass-card rounded-2xl p-6 space-y-6">
-                <div class="text-center space-y-2">
-                    <h4 class="font-cinzel text-lg font-bold text-white">Upload & View Event Photos in Real-Time</h4>
-                    <p class="text-xs sm:text-sm text-gray-300 max-w-lg mx-auto">
-                        Old Boys & VIP guests can drop photos/videos directly into the public Google Drive folder to instantly update this live media wall.
+                <div class="text-center space-y-3">
+                    <h4 class="font-cinzel text-lg font-bold text-white">Upload Event Photos & View Gallery</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 max-w-lg mx-auto leading-relaxed">
+                        Old Boys & VIP guests can upload photos directly into the public Google Drive folder to share gala memories in real-time.
                     </p>
-                    <a href="https://drive.google.com/drive/folders/YOUR_PUBLIC_FOLDER_ID" target="_blank" class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-gold/10 text-gold border border-gold/40 text-xs font-semibold hover:bg-gold hover:text-navy transition-all duration-300">
-                        <i class="fa-brands fa-google-drive"></i>
-                        <span>Upload Event Photos To Drive</span>
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gold/10 text-gold border border-gold/40 text-xs font-semibold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md">
+                        <i class="fa-brands fa-google-drive text-base"></i>
+                        <span>Upload Event Photos To Google Drive</span>
                     </a>
-                </div>
-
-                <!-- Live Photo Grid Container -->
-                <div id="drive-photo-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    <div class="aspect-square rounded-xl bg-navy/60 border border-gold/20 flex items-center justify-center text-gray-500 text-xs hover:border-gold transition-all duration-300">
-                        <i class="fa-solid fa-image text-2xl text-gold/30"></i>
-                    </div>
-                    <div class="aspect-square rounded-xl bg-navy/60 border border-gold/20 flex items-center justify-center text-gray-500 text-xs hover:border-gold transition-all duration-300">
-                        <i class="fa-solid fa-image text-2xl text-gold/30"></i>
-                    </div>
-                    <div class="aspect-square rounded-xl bg-navy/60 border border-gold/20 flex items-center justify-center text-gray-500 text-xs hover:border-gold transition-all duration-300">
-                        <i class="fa-solid fa-image text-2xl text-gold/30"></i>
-                    </div>
-                    <div class="aspect-square rounded-xl bg-navy/60 border border-gold/20 flex items-center justify-center text-gray-500 text-xs hover:border-gold transition-all duration-300">
-                        <i class="fa-solid fa-image text-2xl text-gold/30"></i>
-                    </div>
                 </div>
             </div>
         </section>
