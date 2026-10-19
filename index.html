@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Page Title -->
-    <title>GCI 86/92 Set 40th Anniversary — Executive VIP Heritage Vault & Live Media Hub</title>
+    <title>GCI 86/92 Set 40th Anniversary — Executive VIP Heritage Vault & Media Hub</title>
     
     <!-- Meta Search & AEO Optimization -->
-    <meta name="description" content="Official Executive VIP Media Vault for Government College Ibadan (GCI) 1986-1992 Set 40th Anniversary Jubilee Celebration (1986-2026). Watch the full Gala Night live streaming recording, stream official house anthems, download the Gala programme booklet, and access live Google Drive event photo/video galleries. Digitally packaged by LanBo-Moe Ecosystem.">
+    <meta name="description" content="Official Executive VIP Media Vault for Government College Ibadan (GCI) 1986-1992 Set 40th Anniversary Jubilee Celebration (1986-2026). Watch the full Gala Night live streaming recording, stream official house anthems with exact colors, download the Gala programme booklet, and access live Google Drive event photo/video galleries. Digitally packaged by LanBo-Moe Ecosystem.">
     <meta name="keywords" content="Government College Ibadan, GCI 86/92 Set, GCI 40th Anniversary, GCI Gala Night Live Stream, GCI Anthems, GCI Alumni, GCI Powell House, GCI Carr House, GCI Swanston House, GCI Grier House, GCI Field House, LanBo-Moe Ecosystem, Moses Olanrewaju Bolarin">
     <meta name="author" content="Majestic World of Business / LanBo-Moe Ecosystem">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -35,7 +35,7 @@
     <meta name="twitter:description" content="Watch GCI 86/92 Gala Night recording, stream House Anthems, and access Google Drive media galleries.">
     <meta name="twitter:image" content="https://img.youtube.com/vi/DD9PJqE81ko/maxresdefault.jpg">
 
-    <!-- Favicon & Touch Icons -->
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="images/GCI%2086%20Set%20logo.jpeg">
 
     <!-- Tailwind CSS CDN & FontAwesome -->
@@ -50,6 +50,19 @@
         .card-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .gold-border { border-color: rgba(234, 179, 8, 0.4); }
         .gold-glow { box-shadow: 0 0 25px rgba(234, 179, 8, 0.15); }
+
+        /* Masonry Grid Styling for Top 0.01% Media Layout */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.25rem;
+        }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        @media (min-width: 1280px) { .masonry-grid { column-count: 4; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.25rem;
+        }
     </style>
 
     <!-- Schema.org Microdata for AEO Search Crawlers -->
@@ -143,7 +156,7 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-200 to-yellow-500">86/92 Set Executive Media Vault</span>
             </h1>
             <p class="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto font-normal leading-relaxed">
-                Welcome to the official digital repository for the GCI 86/92 Set 40th Anniversary Celebration. Revisit the live Gala broadcast, explore real-time photo galleries, listen to historic house anthems, and download the anniversary program.
+                Welcome to the official digital repository for the GCI 86/92 Set 40th Anniversary Celebration. Revisit the live Gala broadcast, explore real-time organized photo galleries, listen to historic house anthems, and download the anniversary program.
             </p>
         </div>
     </section>
@@ -185,33 +198,98 @@
         </div>
     </section>
 
-    <!-- SECTION 2: AUTO-UPDATING GOOGLE DRIVE PHOTO & VIDEO GALLERY -->
+    <!-- SECTION 2: TOP 0.01% ORGANIZED MASONRY + DRIVE MEDIA GALLERY -->
     <section id="gallery" class="py-16 bg-gray-900 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
                 <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-900/40 border border-purple-500/40 text-purple-300 text-xs font-bold uppercase mb-3">
-                    <i class="fa-solid fa-arrows-rotate animate-spin mr-1"></i> Auto-Updating Cloud Sync
+                    <i class="fa-solid fa-layer-group mr-1"></i> Elite Masonry & Auto-Cloud Sync
                 </div>
                 <h2 class="text-3xl font-extrabold text-white font-cinzel">Live Event Photo & Video Gallery</h2>
-                <p class="text-gray-400 text-sm mt-2">All photos and clips uploaded to the shared Google Drive folder appear directly below in real-time.</p>
+                <p class="text-gray-400 text-sm mt-2">All uploaded photos and video clips dynamically auto-adjust into an organized, uniform layout—stacking portrait and landscape assets seamlessly without awkward gaps.</p>
             </div>
 
-            <!-- Google Drive Embedded Grid Gallery -->
-            <div class="card-glass rounded-3xl p-3 sm:p-4 border border-gray-800 shadow-2xl mb-8">
-                <div class="w-full h-[600px] rounded-2xl overflow-hidden bg-gray-950">
-                    <iframe 
-                        src="https://drive.google.com/embeddedfolderview?id=1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_#grid" 
-                        class="w-full h-full border-0" 
-                        title="GCI 86/92 Media Upload Folder">
-                    </iframe>
+            <!-- View Switcher & Filter Tabs -->
+            <div class="flex flex-wrap justify-center items-center gap-3 mb-8">
+                <button onclick="switchView('masonry')" id="btn-masonry" class="px-5 py-2.5 rounded-xl font-bold text-xs bg-yellow-500 text-gray-950 shadow-lg transition flex items-center">
+                    <i class="fa-solid fa-border-all mr-2"></i> Masonry Grid View (Organized)
+                </button>
+                <button onclick="switchView('drive')" id="btn-drive" class="px-5 py-2.5 rounded-xl font-bold text-xs bg-gray-800 text-gray-300 hover:text-white transition flex items-center">
+                    <i class="fa-brands fa-google-drive mr-2 text-yellow-400"></i> Direct Drive Folder View
+                </button>
+                <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="px-5 py-2.5 rounded-xl font-bold text-xs bg-purple-600 text-white shadow-lg transition flex items-center">
+                    <i class="fa-solid fa-cloud-arrow-up mr-2"></i> Upload Photo / Video Clip
+                </a>
+            </div>
+
+            <!-- VIEW A: Top 0.01% Masonry Layout (Auto-Stacks Portrait & Landscape) -->
+            <div id="view-masonry" class="block">
+                <div class="masonry-grid">
+                    <!-- Feature Card 1: Gala Night Keynote (Landscape 16:9) -->
+                    <div class="masonry-item card-glass p-3 rounded-2xl border border-gray-800 hover:border-yellow-500/50 transition">
+                        <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-950 mb-3">
+                            <img src="https://img.youtube.com/vi/DD9PJqE81ko/maxresdefault.jpg" alt="Gala Night Broadcast" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 px-2 py-1 rounded bg-black/70 text-[10px] font-bold text-yellow-400 uppercase">Widescreen HD</div>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">GCI 86/92 Gala Night Opening</h4>
+                        <p class="text-xs text-gray-400 mt-1">Official event kickoff & keynote address.</p>
+                    </div>
+
+                    <!-- Feature Card 2: Executive VIP Portrait Reel (Portrait 9:16) -->
+                    <div class="masonry-item card-glass p-3 rounded-2xl border border-purple-500/40 hover:border-purple-400 transition">
+                        <div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-gray-950 mb-3">
+                            <img src="images/GCI%2086%20Set%20logo.jpeg" alt="Executive Portrait" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 px-2 py-1 rounded bg-purple-900/80 text-[10px] font-bold text-purple-200 uppercase">Portrait Reel</div>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">Set Executive Roll Call</h4>
+                        <p class="text-xs text-gray-400 mt-1">40th Anniversary executive portraits & honours.</p>
+                    </div>
+
+                    <!-- Feature Card 3: Old Boys Brotherhood (Landscape 4:3) -->
+                    <div class="masonry-item card-glass p-3 rounded-2xl border border-blue-500/40 hover:border-blue-400 transition">
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-950 mb-3">
+                            <img src="images/GCIOBA%20logo.jpeg" alt="GCIOBA Emblem" class="w-full h-full object-cover">
+                            <div class="absolute top-2 right-2 px-2 py-1 rounded bg-blue-900/80 text-[10px] font-bold text-blue-200 uppercase">Album Photo</div>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">GCIOBA National Crest</h4>
+                        <p class="text-xs text-gray-400 mt-1">Four decades of unbroken camaraderie.</p>
+                    </div>
+
+                    <!-- Live Cloud Drive Container Inside Masonry -->
+                    <div class="masonry-item card-glass p-4 rounded-2xl border gold-border col-span-1 sm:col-span-2">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider"><i class="fa-solid fa-arrows-rotate animate-spin mr-1"></i> Live Drive Vault Embed</span>
+                            <span class="text-[10px] text-gray-400">Auto-Refreshes</span>
+                        </div>
+                        <div class="w-full h-[380px] rounded-xl overflow-hidden bg-gray-950">
+                            <iframe 
+                                src="https://drive.google.com/embeddedfolderview?id=1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_#grid" 
+                                class="w-full h-full border-0" 
+                                title="GCI 86/92 Media Upload Folder">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW B: Direct Google Drive Folder Embedded View -->
+            <div id="view-drive" class="hidden">
+                <div class="card-glass rounded-3xl p-3 sm:p-4 border border-gray-800 shadow-2xl">
+                    <div class="w-full h-[650px] rounded-2xl overflow-hidden bg-gray-950">
+                        <iframe 
+                            src="https://drive.google.com/embeddedfolderview?id=1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_#grid" 
+                            class="w-full h-full border-0" 
+                            title="GCI 86/92 Media Upload Folder Full">
+                        </iframe>
+                    </div>
                 </div>
             </div>
 
             <!-- Upload Action Card -->
-            <div class="card-glass rounded-2xl p-6 border gold-border text-center max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="card-glass rounded-2xl p-6 border gold-border text-center max-w-3xl mx-auto mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="text-left">
                     <h3 class="font-bold text-white text-base">Have photos or videos from the Gala?</h3>
-                    <p class="text-xs text-gray-400 mt-1">Upload them directly to the shared drive folder so all Old Boys can access them.</p>
+                    <p class="text-xs text-gray-400 mt-1">Upload portrait shorts or widescreen videos directly to Google Drive.</p>
                 </div>
                 <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="px-6 py-3 rounded-xl font-bold text-xs bg-yellow-500 text-gray-950 hover:bg-yellow-400 transition whitespace-nowrap shadow-lg flex items-center">
                     <i class="fa-solid fa-cloud-arrow-up mr-2 text-sm"></i> Upload Files Now
@@ -220,12 +298,12 @@
         </div>
     </section>
 
-    <!-- SECTION 3: COMMEMORATIVE HOUSE ANTHEMS AUDIO SUITE -->
+    <!-- SECTION 3: COMMEMORATIVE HOUSE ANTHEMS AUDIO SUITE (CORRECT HOUSE COLORS) -->
     <section id="anthems" class="py-16 bg-gray-950 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-3xl font-extrabold text-white font-cinzel">Official School & House Anthems</h2>
-                <p class="text-gray-400 text-sm mt-2">Relive the pride and heritage of Government College Ibadan house anthems.</p>
+                <p class="text-gray-400 text-sm mt-2">Relive the pride and heritage of Government College Ibadan house anthems with exact house colors.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -244,43 +322,13 @@
                     </audio>
                 </div>
 
-                <!-- Powell House -->
-                <div class="card-glass p-6 rounded-2xl border border-purple-500/30">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
-                        <div>
-                            <h3 class="font-bold text-white text-base">Powell House Anthem</h3>
-                            <span class="text-xs text-purple-400 font-medium">Purple House</span>
-                        </div>
-                    </div>
-                    <audio controls class="w-full h-10 rounded-lg">
-                        <source src="audio/Powell%20House%20Anthem.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-
-                <!-- Carr House -->
-                <div class="card-glass p-6 rounded-2xl border border-blue-500/30">
+                <!-- Swanston House (BLUE) -->
+                <div class="card-glass p-6 rounded-2xl border border-blue-500/40">
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
                         <div>
-                            <h3 class="font-bold text-white text-base">Carr House Anthem</h3>
-                            <span class="text-xs text-blue-400 font-medium">Blue House</span>
-                        </div>
-                    </div>
-                    <audio controls class="w-full h-10 rounded-lg">
-                        <source src="audio/GCI%20Carr%20House%20Anthem.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-
-                <!-- Swanston House -->
-                <div class="card-glass p-6 rounded-2xl border border-red-500/30">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
-                        <div>
                             <h3 class="font-bold text-white text-base">Swanston House Anthem</h3>
-                            <span class="text-xs text-red-400 font-medium">Red House</span>
+                            <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Blue House</span>
                         </div>
                     </div>
                     <audio controls class="w-full h-10 rounded-lg">
@@ -289,13 +337,13 @@
                     </audio>
                 </div>
 
-                <!-- Grier House -->
-                <div class="card-glass p-6 rounded-2xl border border-amber-500/30">
+                <!-- Grier House (MAROON) -->
+                <div class="card-glass p-6 rounded-2xl border border-red-900/60">
                     <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-amber-500 text-gray-950 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
+                        <div class="w-10 h-10 rounded-xl bg-red-900 text-amber-200 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
                         <div>
                             <h3 class="font-bold text-white text-base">Grier House Anthem</h3>
-                            <span class="text-xs text-amber-400 font-medium">Maroon / Gold House</span>
+                            <span class="text-xs text-red-400 font-bold uppercase tracking-wider">Maroon House</span>
                         </div>
                     </div>
                     <audio controls class="w-full h-10 rounded-lg">
@@ -304,17 +352,47 @@
                     </audio>
                 </div>
 
-                <!-- Field House -->
-                <div class="card-glass p-6 rounded-2xl border border-green-500/30">
+                <!-- Field House (GREEN) -->
+                <div class="card-glass p-6 rounded-2xl border border-green-500/40">
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="w-10 h-10 rounded-xl bg-green-600 text-white flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
                         <div>
                             <h3 class="font-bold text-white text-base">Field House Anthem</h3>
-                            <span class="text-xs text-green-400 font-medium">Green House</span>
+                            <span class="text-xs text-green-400 font-bold uppercase tracking-wider">Green House</span>
                         </div>
                     </div>
                     <audio controls class="w-full h-10 rounded-lg">
                         <source src="audio/GCI%20Field%20House%20Anthem.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <!-- Carr House (ORANGE) -->
+                <div class="card-glass p-6 rounded-2xl border border-orange-500/40">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-orange-500 text-gray-950 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Carr House Anthem</h3>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-wider">Orange House</span>
+                        </div>
+                    </div>
+                    <audio controls class="w-full h-10 rounded-lg">
+                        <source src="audio/GCI%20Carr%20House%20Anthem.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <!-- Powell House (PURPLE) -->
+                <div class="card-glass p-6 rounded-2xl border border-purple-500/40">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-shield"></i></div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Powell House Anthem</h3>
+                            <span class="text-xs text-purple-400 font-bold uppercase tracking-wider">Purple House</span>
+                        </div>
+                    </div>
+                    <audio controls class="w-full h-10 rounded-lg">
+                        <source src="audio/Powell%20House%20Anthem.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -346,5 +424,32 @@
         </div>
     </footer>
 
+    <!-- Interactive View Switcher JavaScript -->
+    <script>
+        function switchView(viewName) {
+            const viewMasonry = document.getElementById('view-masonry');
+            const viewDrive = document.getElementById('view-drive');
+            const btnMasonry = document.getElementById('btn-masonry');
+            const btnDrive = document.getElementById('btn-drive');
+
+            if (viewName === 'masonry') {
+                viewMasonry.classList.remove('hidden');
+                viewMasonry.classList.add('block');
+                viewDrive.classList.remove('block');
+                viewDrive.classList.add('hidden');
+
+                btnMasonry.className = "px-5 py-2.5 rounded-xl font-bold text-xs bg-yellow-500 text-gray-950 shadow-lg transition flex items-center";
+                btnDrive.className = "px-5 py-2.5 rounded-xl font-bold text-xs bg-gray-800 text-gray-300 hover:text-white transition flex items-center";
+            } else {
+                viewDrive.classList.remove('hidden');
+                viewDrive.classList.add('block');
+                viewMasonry.classList.remove('block');
+                viewMasonry.classList.add('hidden');
+
+                btnDrive.className = "px-5 py-2.5 rounded-xl font-bold text-xs bg-yellow-500 text-gray-950 shadow-lg transition flex items-center";
+                btnMasonry.className = "px-5 py-2.5 rounded-xl font-bold text-xs bg-gray-800 text-gray-300 hover:text-white transition flex items-center";
+            }
+        }
+    </script>
 </body>
 </html>
