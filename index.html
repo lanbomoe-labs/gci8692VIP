@@ -19,6 +19,7 @@
                         navydark: '#050C17',
                         gold: '#D4AF37',
                         goldlight: '#FFF0B5',
+                        golddark: '#AA7C11',
                         crimson: '#8B0000',
                         slatecard: '#1E293B'
                     },
@@ -51,21 +52,34 @@
 <body class="min-h-screen flex flex-col justify-between bg-navydark text-white">
 
     <!-- EXECUTIVE TOP NAV BAR -->
-    <nav class="w-full py-4 px-6 bg-navy/95 border-b border-gold/30 sticky top-0 z-50 backdrop-blur-md flex items-center justify-between">
+    <nav class="w-full py-3.5 px-4 sm:px-8 bg-navy/95 border-b border-gold/30 sticky top-0 z-50 backdrop-blur-md flex items-center justify-between">
         <div class="flex items-center space-x-3">
             <img src="assets/images/GCIOBA%20logo.jpeg" onerror="this.onerror=null; this.src='assets/images/GCIOBA logo.jpeg';" alt="GCIOBA Crest" class="w-9 h-9 rounded-full border border-gold/50 object-cover">
-            <span class="font-cinzel text-sm sm:text-base font-bold text-white tracking-wider">GCI 86/92 SET</span>
+            <div class="flex flex-col">
+                <span class="font-cinzel text-sm sm:text-base font-bold text-white tracking-wider">GCI 86/92 SET</span>
+                <span class="text-[10px] text-gold font-semibold tracking-widest uppercase hidden sm:inline">40th Anniversary VIP Vault</span>
+            </div>
         </div>
-        <div class="flex items-center space-x-4">
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-6 text-xs font-medium text-gray-300">
+            <a href="#news" class="hover:text-gold transition-colors">News Desk</a>
+            <a href="#youtube" class="hover:text-gold transition-colors">Gala Broadcast</a>
+            <a href="#audio" class="hover:text-gold transition-colors">Audio Suite</a>
+            <a href="#publication" class="hover:text-gold transition-colors">Programme Booklet</a>
+            <a href="#gallery" class="hover:text-gold transition-colors">Media Gallery</a>
+        </div>
+
+        <div class="flex items-center space-x-3">
             <a href="https://www.lanbomoe.com" target="_blank" class="px-3.5 py-1.5 rounded-full text-xs font-semibold text-gold border border-gold/40 bg-gold/10 hover:bg-gold hover:text-navy transition-all duration-300 flex items-center space-x-2">
-                <span>LanBo-Moe Main Hub</span>
+                <span>LanBo-Moe Hub</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
         </div>
     </nav>
 
     <!-- HERO HEADER -->
-    <header class="w-full py-12 px-4 text-center border-b border-gold/20 bg-gradient-to-b from-navy to-navydark relative overflow-hidden">
+    <header id="hero" class="w-full py-12 px-4 text-center border-b border-gold/20 bg-gradient-to-b from-navy via-navy/90 to-navydark relative overflow-hidden">
         <div class="max-w-4xl mx-auto space-y-5">
             <div class="flex justify-center items-center space-x-4 mb-2">
                 <img src="assets/images/GCIOBA%20logo.jpeg" onerror="this.onerror=null; this.src='assets/images/GCIOBA logo.jpeg';" alt="GCIOBA Crest" class="w-16 h-16 rounded-full border-2 border-gold/60 shadow-lg object-cover">
@@ -82,8 +96,18 @@
                 1986–1992 SET • EXECUTIVE VIP MEDIA VAULT
             </h2>
             <p class="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Welcome, Esteemed Dignitary, Distinguished Guest & Alumni Old Boy. Access official commemorative audio anthems, the 28-page gala programme publication, and the live photo/video gallery below.
+                Welcome, Esteemed Dignitary, Distinguished Guest & Alumni Old Boy. Access official news updates, Gala Night YouTube broadcast, 6 house anthems, 28-page deluxe booklet, and auto-grouped photo & video galleries below.
             </p>
+            <div class="flex flex-wrap justify-center gap-3 pt-2 text-xs font-semibold">
+                <a href="#youtube" class="px-4 py-2 rounded-xl bg-red-600/30 text-red-200 border border-red-500/40 hover:bg-red-600 hover:text-white transition-all flex items-center space-x-2">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>Watch Gala Stream</span>
+                </a>
+                <a href="#gallery" class="px-4 py-2 rounded-xl bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-navy transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-images"></i>
+                    <span>Explore Media Gallery</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -102,8 +126,135 @@
             </a>
         </div>
 
-        <!-- COMMEMORATIVE AUDIO SOUNDTRACKS SECTION -->
-        <section class="space-y-6">
+        <!-- SECTION 1: LATEST NEWS & REUNION HIGHLIGHTS -->
+        <section id="news" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-gold/20 pb-3">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-newspaper"></i></div>
+                    <h3 class="text-xl font-cinzel font-bold gold-gradient-text">GCI 2026 Reunion News Desk</h3>
+                </div>
+                <span class="text-xs text-gold font-semibold uppercase tracking-wider">Official Updates</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- News Card 1 -->
+                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gold">
+                            <span class="font-semibold"><i class="fa-solid fa-calendar-day mr-1"></i> October 2026</span>
+                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">Flagship Project</span>
+                        </div>
+                        <h4 class="font-cinzel font-bold text-base text-white">GCI 1986 Set Commissioned Young Farmers' Club & ICT Project X</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Under the leadership of Set Chairman Seun Esho, the 1986 Set successfully commissioned the Young Farmers' Club (YFC) & Farm Project alongside ICT Project X and Google-supported Career Fairs for GCI students.
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
+                        <span>Initiative Lead: GCI '86 EXCO & LOC</span>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gold">
+                            <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1"></i> Jogor Center, Ibadan</span>
+                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">Gala Night</span>
+                        </div>
+                        <h4 class="font-cinzel font-bold text-base text-white">40th Anniversary Gala Dinner & Awards Night Celebrated in Style</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Old Boys gathered at Function Hall, Jogor Center for an unforgettable evening of brotherhood, awards presentation by Charles Olayinka, and live house song performances.
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
+                        <span>Venue: Function Hall, Jogor Center, Ibadan</span>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gold">
+                            <span class="font-semibold"><i class="fa-solid fa-table-tennis-paddle-ball mr-1"></i> GCI Campus</span>
+                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">Games Day</span>
+                        </div>
+                        <h4 class="font-cinzel font-bold text-base text-white">Table Tennis Tournament & Asun Night Rekindle 40-Year Bonds</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            The 4-day celebration featured intense table tennis matches, chess, scrabble, woodblock, and a lively Asun & Pepper Soup social night at the GCI premises.
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
+                        <span>Coordinators: Kolade Aladeojebi & Ayo Ajanaku</span>
+                    </div>
+                </div>
+
+                <!-- News Card 4 -->
+                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-xs text-gold">
+                            <span class="font-semibold"><i class="fa-solid fa-book-bookmark mr-1"></i> Deluxe Publication</span>
+                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">28 Pages</span>
+                        </div>
+                        <h4 class="font-cinzel font-bold text-base text-white">28-Page Deluxe Gala Programme Booklet Released</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Designed and produced by LanBo-Moe Ecosystem & MWB Publishing, the 28-page A5 publication features executive messages, memoirs by Tunbi Ashaye & Akintunde Akinlosotu, and complete donor lists.
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
+                        <span>Publisher: LanBo-Moe Systems / MWB Publishing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: GALA NIGHT YOUTUBE VIDEO STREAM -->
+        <section id="youtube" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-gold/20 pb-3">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-red-600/20 flex items-center justify-center text-red-500"><i class="fa-brands fa-youtube text-lg"></i></div>
+                    <h3 class="text-xl font-cinzel font-bold gold-gradient-text">Gala Night YouTube Video Stream</h3>
+                </div>
+                <span class="text-xs text-gold font-semibold flex items-center space-x-1">
+                    <i class="fa-solid fa-circle-play text-red-500 animate-pulse"></i>
+                    <span>Official Broadcast</span>
+                </span>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <h4 class="font-cinzel text-xl font-bold text-white">GCI 86/92 Set 40th Anniversary Gala Night Broadcast</h4>
+                    <p class="text-xs sm:text-sm text-gray-300">
+                        Watch the official YouTube video stream of the GCI 1986–1992 Set 40th Anniversary Gala Dinner, keynote addresses, award presentations, and house song performances.
+                    </p>
+                </div>
+
+                <!-- Responsive YouTube Embed Container -->
+                <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-gold/30 bg-black/90 shadow-2xl">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/DD9PJqE81ko" 
+                        title="GCI 86/92 Set 40th Anniversary Gala Night Video"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                    <div class="text-xs text-gray-400 flex items-center space-x-2">
+                        <i class="fa-solid fa-video text-gold"></i>
+                        <span>Recorded Live at Function Hall, Jogor Center, Ibadan</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=DD9PJqE81ko" target="_blank" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs tracking-wider uppercase transition-all duration-300 flex items-center space-x-2 shadow-lg">
+                        <i class="fa-brands fa-youtube text-base"></i>
+                        <span>Watch Directly on YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: COMMEMORATIVE AUDIO SOUNDTRACKS -->
+        <section id="audio" class="space-y-6">
             <div class="flex items-center justify-between border-b border-gold/20 pb-3">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-music"></i></div>
@@ -119,7 +270,7 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <h4 class="font-cinzel font-bold text-base text-white">GCI School Song</h4>
-                            <p class="text-xs text-gray-400">Official Alumni Anthem</p>
+                            <p class="text-xs text-gray-400">Official Alumni Anthem ("School of our pride...")</p>
                         </div>
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-gold/20 text-gold font-semibold border border-gold/30">Studio Master</span>
                     </div>
@@ -136,7 +287,7 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <h4 class="font-cinzel font-bold text-base text-white">Powell House Anthem</h4>
-                            <p class="text-xs text-gray-400">Official House Song (Purple House)</p>
+                            <p class="text-xs text-gray-400">Official House Song ("From East and West came we...")</p>
                         </div>
                         <span class="px-2.5 py-1 text-[11px] rounded-full bg-purple-900/40 text-purple-300 font-semibold border border-purple-500/30">Studio Master</span>
                     </div>
@@ -219,8 +370,8 @@
             </div>
         </section>
 
-        <!-- OFFICIAL GALA PROGRAMME BOOKLET CONTAINER -->
-        <section class="space-y-6">
+        <!-- SECTION 4: OFFICIAL GALA PROGRAMME BOOKLET CONTAINER -->
+        <section id="publication" class="space-y-6">
             <div class="flex items-center justify-between border-b border-gold/20 pb-3">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-book-open"></i></div>
@@ -250,35 +401,151 @@
             </div>
         </section>
 
-        <!-- GOOGLE DRIVE EVENT GALLERY & UPLOAD -->
-        <section class="space-y-6">
-            <div class="flex items-center justify-between border-b border-gold/20 pb-3">
+        <!-- SECTION 5: LIVE MEDIA GALLERY WALL (AUTO-ARRANGED BY ORIENTATION) -->
+        <section id="gallery" class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-gold/20 pb-3 gap-3">
                 <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-images"></i></div>
-                    <h3 class="text-xl font-cinzel font-bold gold-gradient-text">Live Anniversary Media Gallery</h3>
+                    <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-photo-film"></i></div>
+                    <h3 class="text-xl font-cinzel font-bold gold-gradient-text">Live User Photo & Video Gallery Wall</h3>
                 </div>
                 <span class="text-xs text-gold flex items-center space-x-1">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                    <span>Live Drive Integration</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span>Live Auto-Grouping Grid</span>
                 </span>
             </div>
 
-            <div class="glass-card rounded-2xl p-6 space-y-6">
-                <div class="text-center space-y-3">
-                    <h4 class="font-cinzel text-lg font-bold text-white">Upload Photos, Selfies & Video Clips</h4>
-                    <p class="text-xs sm:text-sm text-gray-300 max-w-lg mx-auto leading-relaxed">
-                        Old Boys & VIP guests can drop photos and videos directly into our public Google Drive folder to update the media wall in real-time.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-3 pt-2">
-                        <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold via-amber-500 to-gold text-navy font-bold text-xs tracking-wider uppercase shadow-lg hover:scale-105 transition-all duration-300">
-                            <i class="fa-brands fa-google-drive text-base"></i>
-                            <span>Upload Photos & Videos To Drive</span>
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1a5AeStLEY-Tj7Zz68i4CRRoCbo0lgQO3?usp=sharing" target="_blank" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gold/10 text-gold border border-gold/40 text-xs font-semibold hover:bg-gold hover:text-navy transition-all duration-300">
-                            <i class="fa-solid fa-folder-open text-base"></i>
-                            <span>Open Root Media Drive Folder</span>
-                        </a>
-                    </div>
+            <!-- Upload Links & Call To Action Box -->
+            <div class="glass-card rounded-2xl p-6 space-y-4 text-center">
+                <h4 class="font-cinzel text-lg font-bold text-white">Upload Your Reunion Photos, Selfies & Video Clips</h4>
+                <p class="text-xs sm:text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
+                    All uploaded media files are automatically grouped below by orientation. Please rename your files with a brief caption before uploading into Google Drive!
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold via-amber-500 to-gold text-navy font-bold text-xs tracking-wider uppercase shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                        <i class="fa-brands fa-google-drive text-base"></i>
+                        <span>Upload Photos & Videos To Drive</span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/19erPKxA6RymMCnlY7jQnI8LxOd8BQDPF?usp=sharing" target="_blank" class="px-5 py-2.5 rounded-xl bg-red-600/20 text-red-200 border border-red-500/40 text-xs font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 flex items-center space-x-2">
+                        <i class="fa-solid fa-clapperboard text-base"></i>
+                        <span>Open Video Clips Folder</span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1a5AeStLEY-Tj7Zz68i4CRRoCbo0lgQO3?usp=sharing" target="_blank" class="px-5 py-2.5 rounded-xl bg-gold/10 text-gold border border-gold/40 text-xs font-semibold hover:bg-gold hover:text-navy transition-all duration-300 flex items-center space-x-2">
+                        <i class="fa-solid fa-folder-open text-base"></i>
+                        <span>Root Media Drive</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION A: HORIZONTAL / WIDESCREEN ORIENTATION GALLERY (16:9 / LANDSCAPE) -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2 text-gold font-cinzel font-bold text-base border-l-2 border-gold pl-3">
+                    <i class="fa-solid fa-display text-sm"></i>
+                    <span>Horizontal & Widescreen Gallery (Landscape Layout)</span>
+                </div>
+                <p class="text-xs text-gray-400">Grouped 16:9 widescreen photos and landscape video clips from Gala Dinner, ICT Project Tour, and Novelty Football.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                    <!-- Landscape Media Item 1 -->
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-video relative flex flex-col justify-end p-4 border border-gold/30 hover:border-gold transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-gold/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-users text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-2 py-0.5 rounded bg-gold/20 text-gold text-[10px] font-bold uppercase border border-gold/30">16:9 Landscape</span>
+                            <h5 class="font-semibold text-xs text-white">Gala Dinner Function Hall & Stage</h5>
+                            <p class="text-[10px] text-gray-300">Jogor Center Widescreen Capture</p>
+                        </div>
+                    </a>
+
+                    <!-- Landscape Media Item 2 -->
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-video relative flex flex-col justify-end p-4 border border-gold/30 hover:border-gold transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-gold/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-table-tennis-paddle-ball text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-2 py-0.5 rounded bg-gold/20 text-gold text-[10px] font-bold uppercase border border-gold/30">16:9 Landscape</span>
+                            <h5 class="font-semibold text-xs text-white">Table Tennis Tournament Matches</h5>
+                            <p class="text-[10px] text-gray-300">GCI Campus Games Day</p>
+                        </div>
+                    </a>
+
+                    <!-- Landscape Media Item 3 -->
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-video relative flex flex-col justify-end p-4 border border-gold/30 hover:border-gold transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-gold/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-seedling text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-2 py-0.5 rounded bg-gold/20 text-gold text-[10px] font-bold uppercase border border-gold/30">16:9 Landscape</span>
+                            <h5 class="font-semibold text-xs text-white">Young Farmers' Club Farm Project</h5>
+                            <p class="text-[10px] text-gray-300">GCI 86/92 Set Flagship Initiative</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION B: VERTICAL / MOBILE STORIES ORIENTATION GALLERY (9:16 / PORTRAIT) -->
+            <div class="space-y-4 pt-4 border-t border-gold/15">
+                <div class="flex items-center space-x-2 text-gold font-cinzel font-bold text-base border-l-2 border-gold pl-3">
+                    <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                    <span>Vertical & Mobile Stories Gallery (Portrait Layout)</span>
+                </div>
+                <p class="text-xs text-gray-400">Grouped 9:16 portrait selfies, smartphone videos, and mobile story snapshots taken by Old Boys and guests.</p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <!-- Portrait Media Item 1 -->
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-[3/4] relative flex flex-col justify-end p-3 border border-gold/30 hover:border-gold transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-gold/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-user-tie text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-1.5 py-0.5 rounded bg-emerald-900/50 text-emerald-300 text-[9px] font-bold uppercase border border-emerald-500/30">9:16 Portrait</span>
+                            <h5 class="font-semibold text-xs text-white">Old Boys VIP Selfies</h5>
+                            <p class="text-[10px] text-gray-300">Red Carpet Snapshots</p>
+                        </div>
+                    </a>
+
+                    <!-- Portrait Media Item 2 -->
+                    <a href="https://drive.google.com/drive/folders/19erPKxA6RymMCnlY7jQnI8LxOd8BQDPF?usp=sharing" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-[3/4] relative flex flex-col justify-end p-3 border border-red-500/30 hover:border-red-400 transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-red-950/40 flex items-center justify-center text-red-400/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-mobile-retro text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-1.5 py-0.5 rounded bg-red-900/50 text-red-300 text-[9px] font-bold uppercase border border-red-500/30">Vertical Video</span>
+                            <h5 class="font-semibold text-xs text-white">House Song Chants Video</h5>
+                            <p class="text-[10px] text-gray-300">Live Stage Reaction</p>
+                        </div>
+                    </a>
+
+                    <!-- Portrait Media Item 3 -->
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-[3/4] relative flex flex-col justify-end p-3 border border-gold/30 hover:border-gold transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-gold/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-shirt text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-1.5 py-0.5 rounded bg-gold/20 text-gold text-[9px] font-bold uppercase border border-gold/30">9:16 Portrait</span>
+                            <h5 class="font-semibold text-xs text-white">Traditional Aso-Oke Attire</h5>
+                            <p class="text-[10px] text-gray-300">Gala African Elegance</p>
+                        </div>
+                    </a>
+
+                    <!-- Portrait Media Item 4 -->
+                    <a href="https://drive.google.com/drive/folders/1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_?usp=drive_link" target="_blank" class="group glass-card rounded-xl overflow-hidden aspect-[3/4] relative flex flex-col justify-end p-3 border border-gold/30 hover:border-gold transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-gold/30 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-champagne-glasses text-4xl"></i>
+                        </div>
+                        <div class="relative z-20 space-y-1">
+                            <span class="px-1.5 py-0.5 rounded bg-gold/20 text-gold text-[9px] font-bold uppercase border border-gold/30">9:16 Portrait</span>
+                            <h5 class="font-semibold text-xs text-white">Toast & Cutting of Cake</h5>
+                            <p class="text-[10px] text-gray-300">Jubilee Milestone Moment</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
