@@ -47,6 +47,9 @@
             border-color: rgba(212, 175, 55, 0.5);
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
         }
+        /* Custom Scrollbar for Carousel */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between bg-navydark text-white">
@@ -63,7 +66,7 @@
 
         <!-- Desktop Navigation Links -->
         <div class="hidden lg:flex items-center space-x-6 text-xs font-medium text-gray-300">
-            <a href="#news" class="hover:text-gold transition-colors">News Desk</a>
+            <a href="#news-carousel-section" class="hover:text-gold transition-colors">Press & News Carousel</a>
             <a href="#youtube" class="hover:text-gold transition-colors">Gala Broadcast</a>
             <a href="#audio" class="hover:text-gold transition-colors">Audio Suite</a>
             <a href="#publication" class="hover:text-gold transition-colors">Programme Booklet</a>
@@ -96,16 +99,16 @@
                 1986–1992 SET • EXECUTIVE VIP MEDIA VAULT
             </h2>
             <p class="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Welcome, Esteemed Dignitary, Distinguished Guest & Alumni Old Boy. Access official news updates, Gala Night YouTube broadcast, 6 house anthems, 28-page deluxe booklet, and auto-grouped photo & video galleries below.
+                Welcome, Esteemed Dignitary, Distinguished Guest & Alumni Old Boy. Access live press search links, press coverage carousel, Gala Night YouTube broadcast, 6 house anthems, 28-page deluxe booklet, and media gallery wall below.
             </p>
             <div class="flex flex-wrap justify-center gap-3 pt-2 text-xs font-semibold">
+                <a href="#news-carousel-section" class="px-4 py-2 rounded-xl bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-navy transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>Explore News Carousel</span>
+                </a>
                 <a href="#youtube" class="px-4 py-2 rounded-xl bg-red-600/30 text-red-200 border border-red-500/40 hover:bg-red-600 hover:text-white transition-all flex items-center space-x-2">
                     <i class="fa-brands fa-youtube"></i>
                     <span>Watch Gala Stream</span>
-                </a>
-                <a href="#gallery" class="px-4 py-2 rounded-xl bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-navy transition-all flex items-center space-x-2">
-                    <i class="fa-solid fa-images"></i>
-                    <span>Explore Media Gallery</span>
                 </a>
             </div>
         </div>
@@ -126,84 +129,147 @@
             </a>
         </div>
 
-        <!-- SECTION 1: LATEST NEWS & REUNION HIGHLIGHTS -->
-        <section id="news" class="space-y-6">
-            <div class="flex items-center justify-between border-b border-gold/20 pb-3">
+        <!-- SECTION 1: SCROLLING NEWS & MEDIA SEARCH CAROUSEL -->
+        <section id="news-carousel-section" class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-gold/20 pb-3 gap-3">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-newspaper"></i></div>
-                    <h3 class="text-xl font-cinzel font-bold gold-gradient-text">GCI 2026 Reunion News Desk</h3>
+                    <div>
+                        <h3 class="text-xl font-cinzel font-bold gold-gradient-text">GCI 2026 Reunion Press & News Radar</h3>
+                        <p class="text-[11px] text-gray-400">Local press coverage, newspaper headlines, and social media search links</p>
+                    </div>
                 </div>
-                <span class="text-xs text-gold font-semibold uppercase tracking-wider">Official Updates</span>
+
+                <!-- Carousel Left/Right Navigation Controls -->
+                <div class="flex items-center space-x-2 self-end sm:self-auto">
+                    <button onclick="scrollNewsCarousel(-1)" class="w-9 h-9 rounded-xl bg-navy border border-gold/40 text-gold hover:bg-gold hover:text-navy transition-all duration-300 flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button onclick="scrollNewsCarousel(1)" class="w-9 h-9 rounded-xl bg-navy border border-gold/40 text-gold hover:bg-gold hover:text-navy transition-all duration-300 flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <!-- News Card 1 -->
-                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+            <!-- LIVE SEARCH QUICK BUTTONS STRIP -->
+            <div class="glass-card rounded-2xl p-4 flex flex-wrap items-center justify-center sm:justify-between gap-3 text-xs font-semibold">
+                <span class="text-gold flex items-center space-x-2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Live Media Search Hub:</span>
+                </span>
+                <div class="flex flex-wrap items-center justify-center gap-2">
+                    <a href="https://www.google.com/search?q=Government+College+Ibadan+1986+Set+40th+Anniversary+Reunion+2026" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-300 border border-blue-500/40 hover:bg-blue-600 hover:text-white transition-all flex items-center space-x-1.5">
+                        <i class="fa-brands fa-google text-xs"></i>
+                        <span>Google Search</span>
+                    </a>
+                    <a href="https://www.google.com/search?tbm=nws&q=Government+College+Ibadan+2026+Reunion" target="_blank" class="px-3 py-1.5 rounded-lg bg-amber-600/20 text-amber-300 border border-amber-500/40 hover:bg-amber-600 hover:text-white transition-all flex items-center space-x-1.5">
+                        <i class="fa-solid fa-newspaper text-xs"></i>
+                        <span>Google News</span>
+                    </a>
+                    <a href="https://twitter.com/search?q=GCI8692Set40th" target="_blank" class="px-3 py-1.5 rounded-lg bg-sky-600/20 text-sky-300 border border-sky-500/40 hover:bg-sky-600 hover:text-white transition-all flex items-center space-x-1.5">
+                        <i class="fa-brands fa-x-twitter text-xs"></i>
+                        <span>X (Twitter) Posts</span>
+                    </a>
+                    <a href="https://www.facebook.com/search/top?q=Government%20College%20Ibadan%201986%20Set" target="_blank" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 text-indigo-300 border border-indigo-500/40 hover:bg-indigo-600 hover:text-white transition-all flex items-center space-x-1.5">
+                        <i class="fa-brands fa-facebook text-xs"></i>
+                        <span>Facebook Feed</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SCROLLING CAROUSEL CONTAINER -->
+            <div id="news-carousel" class="flex space-x-5 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory py-2">
+                
+                <!-- Carousel Card 1: Nigerian Tribune / Local Dailies -->
+                <div class="snap-start min-w-[280px] sm:min-w-[320px] max-w-[340px] glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between border-l-4 border-l-gold shadow-lg flex-shrink-0">
                     <div class="space-y-2">
                         <div class="flex items-center justify-between text-xs text-gold">
-                            <span class="font-semibold"><i class="fa-solid fa-calendar-day mr-1"></i> October 2026</span>
-                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">Flagship Project</span>
+                            <span class="font-bold"><i class="fa-solid fa-newspaper mr-1"></i> Nigerian Tribune / Dailies</span>
+                            <span class="px-2 py-0.5 rounded bg-gold/20 text-gold text-[10px] font-bold">Local Press</span>
                         </div>
-                        <h4 class="font-cinzel font-bold text-base text-white">GCI 1986 Set Commissioned Young Farmers' Club & ICT Project X</h4>
+                        <h4 class="font-cinzel font-bold text-sm text-white">GCI '86 Set Commissions Young Farmers' Club & ICT Project X</h4>
                         <p class="text-xs text-gray-300 leading-relaxed">
-                            Under the leadership of Set Chairman Seun Esho, the 1986 Set successfully commissioned the Young Farmers' Club (YFC) & Farm Project alongside ICT Project X and Google-supported Career Fairs for GCI students.
+                            National newspapers report on the landmark commissioning of the Young Farmers' Club, ICT center upgrades, and career guidance sessions at GCI campus.
                         </p>
                     </div>
-                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
-                        <span>Initiative Lead: GCI '86 EXCO & LOC</span>
-                    </div>
+                    <a href="https://www.google.com/search?q=site:tribuneonlineng.com+Government+College+Ibadan+1986+Set" target="_blank" class="inline-flex items-center space-x-1.5 text-xs text-gold font-semibold hover:underline pt-2 border-t border-gold/15">
+                        <span>Read Press Coverage</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
                 </div>
 
-                <!-- News Card 2 -->
-                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                <!-- Carousel Card 2: Vanguard & Guardian Nigeria -->
+                <div class="snap-start min-w-[280px] sm:min-w-[320px] max-w-[340px] glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between border-l-4 border-l-emerald-500 shadow-lg flex-shrink-0">
                     <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gold">
-                            <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1"></i> Jogor Center, Ibadan</span>
-                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">Gala Night</span>
+                        <div class="flex items-center justify-between text-xs text-emerald-400">
+                            <span class="font-bold"><i class="fa-solid fa-globe mr-1"></i> Vanguard & Guardian</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300 text-[10px] font-bold">National News</span>
                         </div>
-                        <h4 class="font-cinzel font-bold text-base text-white">40th Anniversary Gala Dinner & Awards Night Celebrated in Style</h4>
+                        <h4 class="font-cinzel font-bold text-sm text-white">40 Years After: Old Boys Rally Support for Alma Mater Infrastructure</h4>
                         <p class="text-xs text-gray-300 leading-relaxed">
-                            Old Boys gathered at Function Hall, Jogor Center for an unforgettable evening of brotherhood, awards presentation by Charles Olayinka, and live house song performances.
+                            National dailies feature Chairman Seun Esho and executive committee members detailing the 1986 set's long-term endowment for GCI students.
                         </p>
                     </div>
-                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
-                        <span>Venue: Function Hall, Jogor Center, Ibadan</span>
-                    </div>
+                    <a href="https://www.google.com/search?q=site:vanguardngr.com+Government+College+Ibadan+2026" target="_blank" class="inline-flex items-center space-x-1.5 text-xs text-emerald-400 font-semibold hover:underline pt-2 border-t border-gold/15">
+                        <span>Search Vanguard Articles</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
                 </div>
 
-                <!-- News Card 3 -->
-                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                <!-- Carousel Card 3: Gala Night at Jogor Center -->
+                <div class="snap-start min-w-[280px] sm:min-w-[320px] max-w-[340px] glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between border-l-4 border-l-red-500 shadow-lg flex-shrink-0">
                     <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gold">
-                            <span class="font-semibold"><i class="fa-solid fa-table-tennis-paddle-ball mr-1"></i> GCI Campus</span>
-                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">Games Day</span>
+                        <div class="flex items-center justify-between text-xs text-red-400">
+                            <span class="font-bold"><i class="fa-solid fa-champagne-glasses mr-1"></i> Gala Dinner Special</span>
+                            <span class="px-2 py-0.5 rounded bg-red-900/40 text-red-300 text-[10px] font-bold">Jogor Center</span>
                         </div>
-                        <h4 class="font-cinzel font-bold text-base text-white">Table Tennis Tournament & Asun Night Rekindle 40-Year Bonds</h4>
+                        <h4 class="font-cinzel font-bold text-sm text-white">40th Reunion Gala Banquet & Executive Awards Ceremony</h4>
                         <p class="text-xs text-gray-300 leading-relaxed">
-                            The 4-day celebration featured intense table tennis matches, chess, scrabble, woodblock, and a lively Asun & Pepper Soup social night at the GCI premises.
+                            Highlights from Function Hall, Jogor Center including award presentations by Charles Olayinka, traditional house song performances, and alumni toasts.
                         </p>
                     </div>
-                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
-                        <span>Coordinators: Kolade Aladeojebi & Ayo Ajanaku</span>
-                    </div>
+                    <a href="https://www.youtube.com/watch?v=DD9PJqE81ko" target="_blank" class="inline-flex items-center space-x-1.5 text-xs text-red-400 font-semibold hover:underline pt-2 border-t border-gold/15">
+                        <span>Watch Gala Broadcast</span>
+                        <i class="fa-solid fa-play text-[10px]"></i>
+                    </a>
                 </div>
 
-                <!-- News Card 4 -->
-                <div class="glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between">
+                <!-- Carousel Card 4: Games Day & Asun Night -->
+                <div class="snap-start min-w-[280px] sm:min-w-[320px] max-w-[340px] glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between border-l-4 border-l-purple-500 shadow-lg flex-shrink-0">
                     <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gold">
-                            <span class="font-semibold"><i class="fa-solid fa-book-bookmark mr-1"></i> Deluxe Publication</span>
-                            <span class="px-2 py-0.5 rounded bg-gold/10 border border-gold/30 text-[10px]">28 Pages</span>
+                        <div class="flex items-center justify-between text-xs text-purple-300">
+                            <span class="font-bold"><i class="fa-solid fa-table-tennis-paddle-ball mr-1"></i> Games & Asun Night</span>
+                            <span class="px-2 py-0.5 rounded bg-purple-900/40 text-purple-300 text-[10px] font-bold">Campus Sports</span>
                         </div>
-                        <h4 class="font-cinzel font-bold text-base text-white">28-Page Deluxe Gala Programme Booklet Released</h4>
+                        <h4 class="font-cinzel font-bold text-sm text-white">Table Tennis Tournament & Campus Social Night</h4>
                         <p class="text-xs text-gray-300 leading-relaxed">
-                            Designed and produced by LanBo-Moe Ecosystem & MWB Publishing, the 28-page A5 publication features executive messages, memoirs by Tunbi Ashaye & Akintunde Akinlosotu, and complete donor lists.
+                            Old Boys compete in table tennis, chess, scrabble, and woodblock under the leadership of Kolade Aladeojebi and committee coordinators.
                         </p>
                     </div>
-                    <div class="pt-2 border-t border-gold/15 text-[11px] text-gray-400">
-                        <span>Publisher: LanBo-Moe Systems / MWB Publishing</span>
-                    </div>
+                    <a href="https://www.facebook.com/search/top?q=Government%20College%20Ibadan%20Table%20Tennis" target="_blank" class="inline-flex items-center space-x-1.5 text-xs text-purple-300 font-semibold hover:underline pt-2 border-t border-gold/15">
+                        <span>View Facebook Social Posts</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
                 </div>
+
+                <!-- Carousel Card 5: 28-Page Publication Release -->
+                <div class="snap-start min-w-[280px] sm:min-w-[320px] max-w-[340px] glass-card rounded-2xl p-5 space-y-3 flex flex-col justify-between border-l-4 border-l-sky-500 shadow-lg flex-shrink-0">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-xs text-sky-300">
+                            <span class="font-bold"><i class="fa-solid fa-book-open mr-1"></i> MWB Publishing</span>
+                            <span class="px-2 py-0.5 rounded bg-sky-900/40 text-sky-300 text-[10px] font-bold">28 Pages</span>
+                        </div>
+                        <h4 class="font-cinzel font-bold text-sm text-white">28-Page Deluxe Reunion Publication Unveiled</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Official publication packaged by LanBo-Moe Ecosystem featuring memoirs by Tunbi Ashaye & Akintunde Akinlosotu, donor rosters, and historical essays.
+                        </p>
+                    </div>
+                    <a href="#publication" class="inline-flex items-center space-x-1.5 text-xs text-sky-300 font-semibold hover:underline pt-2 border-t border-gold/15">
+                        <span>Preview Publication PDF</span>
+                        <i class="fa-solid fa-file-pdf text-[10px]"></i>
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -566,6 +632,15 @@
             </p>
         </div>
     </footer>
+
+    <!-- JAVASCRIPT FOR CAROUSEL SCROLLING -->
+    <script>
+        function scrollNewsCarousel(direction) {
+            const container = document.getElementById('news-carousel');
+            const scrollAmount = 320;
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
