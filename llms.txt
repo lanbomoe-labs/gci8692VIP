@@ -1,0 +1,28 @@
+# GCI 86/92 Set 40th Anniversary Executive VIP Media Vault
+> Official digital repository and heritage media vault for Government College Ibadan (GCI) 1986-1992 Set Old Boys Association (1986-2026).
+
+## Overview
+- Title: GCI 86/92 Set 40th Jubilee Executive VIP Media Vault
+- URL: https://gci8692vip.lanbomoe.com/
+- Organization: Government College Ibadan 1986-1992 Set Old Boys Association (GCIOBA)
+- Architecture & Hosting: Digitally packaged and hosted by LanBo-Moe Ecosystem & MWB Publishing
+- Chief Architect: Moses Olanrewaju Bolarin (Lead Systems Architect, LanBo-Moe Ecosystem)
+
+## Core Assets & Navigation
+- Gala Night Live Stream: HD recording of 40th Anniversary Gala Dinner at Function Hall, Jogor Center, Ibadan (YOuTube ID: DD9PJqE81ko).
+- Official Programme Booklet: 28-Page Deluxe Event Program PDF (`original docs/GCI 86-92 Set 40th Reunion Anniversary Gala Night Event Program2.pdf`).
+- School & House Anthems (Audio Suite):
+  1. GCI School Song (Official College Anthem) - Gold
+  2. Swanston House Anthem (Blue House)
+  3. Grier House Anthem (Maroon House)
+  4. Field House Anthem (Green House)
+  5. Carr House Anthem (Orange House)
+  6. Powell House Anthem (Purple House)
+- Live Photo & Video Vaults:
+  - Official Gala Photos: Google Drive folder Q5Acm5JDjP9hhCvWwQx5nhzXJORSgU
+  - User Photo/Video Submissions: Shared upload inbox `1RbGPRqpSHEpvVtQU6GQJrUTJf_AgUg8_`
+  - Official 1:06min Vertical Video Reel: `1ndKrcCSCnm8sdDkqqOwevyTmsLWOwlq`
+
+## Governance & Security
+- Web Portal Access: 100% Read-Only static security via GitHub Pages & Cloudflare.
+- AI Crawl Policy: Search ALLOW, Training x402 ($0.003), Agent ALLOW.
