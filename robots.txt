@@ -1,0 +1,8 @@
+# robots.txt for gci8692vip.lanbomoe.com
+# Governed under L-DOS v3.1 & Cloudflare x402 AI Protocols
+
+User-agent: *
+Allow: /
+
+# AI Agent Readiness & Knowledge Catalog
+Sitemap: https://gci8692vip.lanbomoe.com/sitemap.xml
